@@ -81,7 +81,7 @@ Lista_Completa
 # In[21]:
 
 
-with zipfile.ZipFile('./202001_Servidores.zip') as BigFile:
+with zipfile.ZipFile('Servidores.zip') as BigFile:
     print(BigFile.namelist(),sep='\n')
 
 
@@ -94,8 +94,8 @@ with zipfile.ZipFile('./202001_Servidores.zip') as BigFile:
 # In[4]:
 
 
-with zipfile.ZipFile('202001_Servidores.zip') as BigFile:
-    with BigFile.open('202001_Remuneracao.csv') as data:
+with zipfile.ZipFile('Servidores.zip') as BigFile:
+    with BigFile.open('Servidores/202001_Remuneracao.csv') as data:
         dfBig = pd.read_csv(data, sep=';', decimal=",", low_memory=False, encoding='ISO-8859-1') #testar com nrows=10000 primeiro
 
 
